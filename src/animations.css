@@ -1,0 +1,348 @@
+/* =========================================
+   ULTRAVERSE ANIMATION FEATURE
+========================================= */
+
+/* ---------- Scroll Reveal ---------- */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ---------- Fade Animations ---------- */
+
+.anim-fade-up {
+  animation: fadeUp 0.8s ease both;
+}
+
+.anim-fade-down {
+  animation: fadeDown 0.8s ease both;
+}
+
+.anim-fade-left {
+  animation: fadeLeft 0.8s ease both;
+}
+
+.anim-fade-right {
+  animation: fadeRight 0.8s ease both;
+}
+
+.anim-zoom {
+  animation: zoomIn 0.8s ease both;
+}
+
+
+/* ---------- Animation Delays ---------- */
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+
+/* ---------- Hero NFT ---------- */
+
+.hero-nft-animation {
+  animation:
+    heroFadeIn 1s ease both,
+    heroFloat 5s ease-in-out infinite;
+}
+
+
+/* ---------- NFT Cards ---------- */
+
+.nft__item {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.nft__item:hover {
+  transform: translateY(-10px);
+}
+
+
+/* ---------- NFT Images ---------- */
+
+.nft__item_preview {
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.nft__item:hover .nft__item_preview {
+  transform: scale(1.05);
+}
+
+
+/* ---------- NFT Information ---------- */
+
+.nft__item_info {
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.nft__item:hover .nft__item_info {
+  transform: translateY(-4px);
+}
+
+
+/* ---------- Hot Collections ---------- */
+
+.nft_coll {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.nft_coll:hover {
+  transform: translateY(-10px);
+}
+
+.nft_coll_info {
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.nft_coll:hover .nft_coll_info {
+  transform: translateY(-4px);
+}
+
+
+/* ---------- Collection Images ---------- */
+
+.nft_coll img {
+  transition: transform 0.5s ease;
+}
+
+.nft_coll:hover img {
+  transform: scale(1.05);
+}
+
+
+/* ---------- Author Images ---------- */
+
+.author_list_pp img,
+.pp-coll {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.author_list_pp:hover img,
+.nft_coll_pp:hover img {
+  transform: scale(1.08);
+}
+
+
+/* ---------- Feature Boxes ---------- */
+
+.feature-box {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-8px);
+}
+
+
+/* ---------- Category Boxes ---------- */
+
+.icon-box {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.icon-box:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+
+/* ---------- Buttons ---------- */
+
+.btn-main {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-main:hover {
+  transform: translateY(-3px);
+}
+
+
+/* ---------- Navigation ---------- */
+
+#mainmenu a {
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+#mainmenu a:hover {
+  transform: translateY(-2px);
+}
+
+
+/* ---------- Footer Links ---------- */
+
+footer a {
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+footer a:hover {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   KEYFRAMES
+========================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes heroFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
