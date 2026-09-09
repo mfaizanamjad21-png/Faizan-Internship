@@ -2,40 +2,46 @@
    ULTRAVERSE ANIMATION FEATURE
 ========================================= */
 
-/* ---------- Fade Up ---------- */
+/* ---------- Scroll Reveal ---------- */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ---------- Fade Animations ---------- */
 
 .anim-fade-up {
   animation: fadeUp 0.8s ease both;
 }
 
-/* ---------- Fade Down ---------- */
-
 .anim-fade-down {
   animation: fadeDown 0.8s ease both;
 }
-
-/* ---------- Fade Left ---------- */
 
 .anim-fade-left {
   animation: fadeLeft 0.8s ease both;
 }
 
-/* ---------- Fade Right ---------- */
-
 .anim-fade-right {
   animation: fadeRight 0.8s ease both;
 }
-
-/* ---------- Zoom In ---------- */
 
 .anim-zoom {
   animation: zoomIn 0.8s ease both;
 }
 
 
-/* =========================================
-   ANIMATION DELAYS
-========================================= */
+/* ---------- Animation Delays ---------- */
 
 .delay-1 {
   animation-delay: 0.1s;
@@ -62,9 +68,7 @@
 }
 
 
-/* =========================================
-   HERO NFT ANIMATION
-========================================= */
+/* ---------- Hero NFT ---------- */
 
 .hero-nft-animation {
   animation:
@@ -73,9 +77,7 @@
 }
 
 
-/* =========================================
-   NFT CARD HOVER
-========================================= */
+/* ---------- NFT Cards ---------- */
 
 .nft__item {
   transition:
@@ -88,9 +90,7 @@
 }
 
 
-/* =========================================
-   NFT IMAGE HOVER
-========================================= */
+/* ---------- NFT Images ---------- */
 
 .nft__item_preview {
   transition:
@@ -103,9 +103,7 @@
 }
 
 
-/* =========================================
-   NFT INFORMATION HOVER
-========================================= */
+/* ---------- NFT Information ---------- */
 
 .nft__item_info {
   transition:
@@ -118,9 +116,7 @@
 }
 
 
-/* =========================================
-   HOT COLLECTIONS
-========================================= */
+/* ---------- Hot Collections ---------- */
 
 .nft_coll {
   transition:
@@ -131,11 +127,6 @@
 .nft_coll:hover {
   transform: translateY(-10px);
 }
-
-
-/* =========================================
-   COLLECTION INFORMATION
-========================================= */
 
 .nft_coll_info {
   transition:
@@ -148,9 +139,7 @@
 }
 
 
-/* =========================================
-   COLLECTION IMAGE
-========================================= */
+/* ---------- Collection Images ---------- */
 
 .nft_coll img {
   transition: transform 0.5s ease;
@@ -161,9 +150,7 @@
 }
 
 
-/* =========================================
-   AUTHOR IMAGES
-========================================= */
+/* ---------- Author Images ---------- */
 
 .author_list_pp img,
 .pp-coll {
@@ -178,9 +165,7 @@
 }
 
 
-/* =========================================
-   FEATURE BOXES
-========================================= */
+/* ---------- Feature Boxes ---------- */
 
 .feature-box {
   transition:
@@ -193,9 +178,7 @@
 }
 
 
-/* =========================================
-   CATEGORY BOXES
-========================================= */
+/* ---------- Category Boxes ---------- */
 
 .icon-box {
   transition:
@@ -208,9 +191,7 @@
 }
 
 
-/* =========================================
-   MAIN BUTTONS
-========================================= */
+/* ---------- Buttons ---------- */
 
 .btn-main {
   transition:
@@ -223,9 +204,7 @@
 }
 
 
-/* =========================================
-   NAVIGATION
-========================================= */
+/* ---------- Navigation ---------- */
 
 #mainmenu a {
   transition:
@@ -238,9 +217,7 @@
 }
 
 
-/* =========================================
-   FOOTER LINKS
-========================================= */
+/* ---------- Footer Links ---------- */
 
 footer a {
   transition:
@@ -364,11 +341,6 @@ footer a:hover {
     transition-duration: 0.01ms !important;
   }
 
-  .anim-fade-up,
-  .anim-fade-down,
-  .anim-fade-left,
-  .anim-fade-right,
-  .anim-zoom,
   .scroll-reveal {
     opacity: 1;
     transform: none;
