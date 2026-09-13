@@ -1,8 +1,11 @@
 /* =========================================
    ULTRAVERSE ANIMATION FEATURE
-========================================= */
+   ========================================= */
 
-/* ---------- Scroll Reveal ---------- */
+
+/* =========================================
+   SCROLL REVEAL
+   ========================================= */
 
 .scroll-reveal {
   opacity: 0;
@@ -18,7 +21,9 @@
 }
 
 
-/* ---------- Fade Animations ---------- */
+/* =========================================
+   FADE ANIMATIONS
+   ========================================= */
 
 .anim-fade-up {
   animation: fadeUp 0.8s ease both;
@@ -41,7 +46,9 @@
 }
 
 
-/* ---------- Animation Delays ---------- */
+/* =========================================
+   ANIMATION DELAYS
+   ========================================= */
 
 .delay-1 {
   animation-delay: 0.1s;
@@ -68,21 +75,33 @@
 }
 
 
-/* ---------- Hero NFT ---------- */
+/* =========================================
+   HERO NFT
+   ========================================= */
+
+/*
+  Fade and floating animations are separated
+  so both do not control transform at the same time.
+*/
 
 .hero-nft-animation {
-  animation:
-    heroFadeIn 1s ease both,
-    heroFloat 5s ease-in-out infinite;
+  animation: heroFadeIn 1s ease both;
+}
+
+.hero-nft-float {
+  animation: heroFloat 5s ease-in-out 1s infinite;
 }
 
 
-/* ---------- NFT Cards ---------- */
+/* =========================================
+   NFT CARDS
+   ========================================= */
 
 .nft__item {
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease;
+  will-change: transform;
 }
 
 .nft__item:hover {
@@ -90,12 +109,15 @@
 }
 
 
-/* ---------- NFT Images ---------- */
+/* =========================================
+   NFT IMAGES
+   ========================================= */
 
 .nft__item_preview {
   transition:
     transform 0.5s ease,
     filter 0.5s ease;
+  overflow: hidden;
 }
 
 .nft__item:hover .nft__item_preview {
@@ -103,7 +125,9 @@
 }
 
 
-/* ---------- NFT Information ---------- */
+/* =========================================
+   NFT INFORMATION
+   ========================================= */
 
 .nft__item_info {
   transition:
@@ -116,12 +140,15 @@
 }
 
 
-/* ---------- Hot Collections ---------- */
+/* =========================================
+   HOT COLLECTIONS
+   ========================================= */
 
 .nft_coll {
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease;
+  will-change: transform;
 }
 
 .nft_coll:hover {
@@ -139,10 +166,14 @@
 }
 
 
-/* ---------- Collection Images ---------- */
+/* =========================================
+   COLLECTION IMAGES
+   ========================================= */
 
 .nft_coll img {
-  transition: transform 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
 }
 
 .nft_coll:hover img {
@@ -150,7 +181,9 @@
 }
 
 
-/* ---------- Author Images ---------- */
+/* =========================================
+   AUTHOR IMAGES
+   ========================================= */
 
 .author_list_pp img,
 .pp-coll {
@@ -165,7 +198,9 @@
 }
 
 
-/* ---------- Feature Boxes ---------- */
+/* =========================================
+   FEATURE BOXES
+   ========================================= */
 
 .feature-box {
   transition:
@@ -178,7 +213,9 @@
 }
 
 
-/* ---------- Category Boxes ---------- */
+/* =========================================
+   CATEGORY BOXES
+   ========================================= */
 
 .icon-box {
   transition:
@@ -191,7 +228,9 @@
 }
 
 
-/* ---------- Buttons ---------- */
+/* =========================================
+   BUTTONS
+   ========================================= */
 
 .btn-main {
   transition:
@@ -204,7 +243,9 @@
 }
 
 
-/* ---------- Navigation ---------- */
+/* =========================================
+   NAVIGATION
+   ========================================= */
 
 #mainmenu a {
   transition:
@@ -217,7 +258,9 @@
 }
 
 
-/* ---------- Footer Links ---------- */
+/* =========================================
+   FOOTER LINKS
+   ========================================= */
 
 footer a {
   transition:
@@ -232,7 +275,7 @@ footer a:hover {
 
 /* =========================================
    KEYFRAMES
-========================================= */
+   ========================================= */
 
 @keyframes fadeUp {
   from {
@@ -329,7 +372,7 @@ footer a:hover {
 
 /* =========================================
    ACCESSIBILITY
-========================================= */
+   ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -344,5 +387,28 @@ footer a:hover {
   .scroll-reveal {
     opacity: 1;
     transform: none;
+  }
+}
+
+
+/* =========================================
+   MOBILE OPTIMIZATION
+   ========================================= */
+
+@media (max-width: 768px) {
+  .nft__item:hover {
+    transform: translateY(-5px);
+  }
+
+  .nft_coll:hover {
+    transform: translateY(-5px);
+  }
+
+  .feature-box:hover {
+    transform: translateY(-5px);
+  }
+
+  .icon-box:hover {
+    transform: translateY(-5px) scale(1.01);
   }
 }
