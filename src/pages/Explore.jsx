@@ -30,7 +30,7 @@ const Explore = () => {
         >
           <div className="center-y relative text-center">
             <div className="container">
-              <h1 data-aos="fade-down">Explore Cars</h1>
+              <h1 data-aos="fade-down">Explore Books</h1>
             </div>
           </div>
         </section>
@@ -39,13 +39,13 @@ const Explore = () => {
         <section aria-label="section">
           <div className="container">
             <div className="row mb-4" data-aos="fade-up">
-              
+
               {/* Search */}
               <div className="col-md-4 mb-3">
                 <input
                   type="text"
                   className="form-control"
-                  placeholder="Search cars..."
+                  placeholder="Search books..."
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                 />
