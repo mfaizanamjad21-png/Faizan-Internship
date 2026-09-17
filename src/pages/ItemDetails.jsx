@@ -7,24 +7,24 @@ import axios from "axios";
 
 const ItemDetails = () => {
   const [nftItem, setNftItem] = useState("");
-  const id = useParams().id;
-
-  const getNftItem = async () => {
-    const response = await axios.get(
-      `https://us-central1-nft-cloud-functions.cloudfunctions.net/itemDetails?nftId=${id}`
-    );
-
-    setNftItem(response.data);
-  };
+  const { id } = useParams();
 
   useEffect(() => {
+    const getNftItem = async () => {
+      const response = await axios.get(
+        `https://us-central1-nft-cloud-functions.cloudfunctions.net/itemDetails?nftId=${id}`
+      );
+
+      setNftItem(response.data);
+    };
+
     new WOW.WOW({
       live: false,
     }).init();
 
     window.scrollTo(0, 0);
     getNftItem();
-  }, []);
+  }, [id]);
 
   return (
     <div id="wrapper">
@@ -41,6 +41,7 @@ const ItemDetails = () => {
                     alt=""
                   />
                 </div>
+
                 <div className="col-md-6">
                   <div className="item_info">
                     <h2>{nftItem.title + " #" + nftItem.tag}</h2>
@@ -50,15 +51,19 @@ const ItemDetails = () => {
                         <i className="fa fa-eye"></i>
                         {nftItem.views}
                       </div>
+
                       <div className="item_info_like">
                         <i className="fa fa-heart"></i>
                         {nftItem.likes}
                       </div>
                     </div>
+
                     <p>{nftItem.description}</p>
+
                     <div className="d-flex flex-row">
                       <div className="mr40">
                         <h6>Owner</h6>
+
                         <div className="item_author">
                           <div className="author_list_pp">
                             <Link to={`/author/${nftItem.ownerId}`}>
@@ -70,6 +75,7 @@ const ItemDetails = () => {
                               <i className="fa fa-check"></i>
                             </Link>
                           </div>
+
                           <div className="author_list_info">
                             <Link to={`/author/${nftItem.ownerId}`}>
                               {nftItem.ownerName}
@@ -77,11 +83,14 @@ const ItemDetails = () => {
                           </div>
                         </div>
                       </div>
+
                       <div></div>
                     </div>
+
                     <div className="de_tab tab_simple">
                       <div className="de_tab_content">
                         <h6>Creator</h6>
+
                         <div className="item_author">
                           <div className="author_list_pp">
                             <Link to={`/author/${nftItem.creatorId}`}>
@@ -93,6 +102,7 @@ const ItemDetails = () => {
                               <i className="fa fa-check"></i>
                             </Link>
                           </div>
+
                           <div className="author_list_info">
                             <Link to={`/author/${nftItem.creatorId}`}>
                               {nftItem.creatorName}
@@ -100,8 +110,11 @@ const ItemDetails = () => {
                           </div>
                         </div>
                       </div>
+
                       <div className="spacer-40"></div>
+
                       <h6>Price</h6>
+
                       <div className="nft-item-price">
                         <img src={EthImage} alt="" />
                         <span>{nftItem.price}</span>
@@ -115,17 +128,22 @@ const ItemDetails = () => {
                 <div className="col-md-6 text-center">
                   <Skeleton width="100%" height="100%" />
                 </div>
+
                 <div className="col-md-6">
                   <div className="item_info">
                     <Skeleton width="300px" height="40px" />
+
                     <div className="item_info_counts">
                       <Skeleton width="80px" height="30px" />
                       <Skeleton width="80px" height="30px" />
                     </div>
+
                     <Skeleton width="100%" height="80px" />
+
                     <div className="d-flex flex-row">
                       <div className="mr40">
                         <h6>Owner</h6>
+
                         <div className="item_author">
                           <div className="author_list_pp">
                             <Skeleton
@@ -134,16 +152,20 @@ const ItemDetails = () => {
                               borderRadius="50%"
                             />
                           </div>
+
                           <div className="author_list_info">
                             <Skeleton width="125px" height="20px" />
                           </div>
                         </div>
                       </div>
+
                       <div></div>
                     </div>
+
                     <div className="de_tab tab_simple">
                       <div className="de_tab_content">
                         <h6>Creator</h6>
+
                         <div className="item_author">
                           <div className="author_list_pp">
                             <Skeleton
@@ -152,13 +174,17 @@ const ItemDetails = () => {
                               borderRadius="50%"
                             />
                           </div>
+
                           <div className="author_list_info">
                             <Skeleton width="125px" height="20px" />
                           </div>
                         </div>
                       </div>
+
                       <div className="spacer-40"></div>
+
                       <h6>Price</h6>
+
                       <div className="nft-item-price">
                         <Skeleton width="75px" height="20px" />
                       </div>
